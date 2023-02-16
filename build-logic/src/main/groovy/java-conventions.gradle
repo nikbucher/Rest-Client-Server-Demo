@@ -1,0 +1,25 @@
+plugins {
+	id('common-conventions')
+	id('java')
+}
+
+java {
+	toolchain {
+		languageVersion.set(JavaLanguageVersion.of("$javaVersion"))
+	}
+}
+
+dependencies {
+	implementation(platform(libs.spring.boot.bom))
+
+	testImplementation(libs.junit5)
+	testImplementation(libs.assertj)
+}
+
+tasks.withType(JavaCompile.class).configureEach {
+	options.compilerArgs << '-parameters'
+}
+tasks.withType(Test.class).configureEach {
+	useJUnitPlatform()
+}
+

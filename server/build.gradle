@@ -1,0 +1,9 @@
+plugins {
+	id 'spring-conventions'
+}
+
+dependencies {
+	implementation(project(':api'))
+	implementation(libs.spring.boot.starter.web)
+	testImplementation(libs.spring.boot.starter.test)
+}

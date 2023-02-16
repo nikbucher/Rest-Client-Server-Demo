@@ -1,0 +1,54 @@
+[versions]
+assertj = "3.22.0"
+junit5 = "5.8.2"
+kotlin = "1.8.0"
+poi = "5.2.3"
+springBoot = "3.0.2"
+springCloud = "2021.0.5"
+vaadin = "23.2.10"
+
+
+[libraries]
+spring-boot-bom = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "springBoot" }
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+
+kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref = "kotlin" }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+kotlin-stdlib-jdk7 = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk7", version.ref = "kotlin" }
+kotlin-stdlib-jdk8 = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+
+httpclient = { group = "org.apache.httpcomponents", name = "httpclient" }
+httpclient5 = { group = "org.apache.httpcomponents.client5", name = "httpclient5" }
+jackson-annotations = { group = "com.fasterxml.jackson.core", name = "jackson-annotations" }
+jaxws-tools = { group = "com.sun.xml.ws", name = "jaxws-tools", version = "3.0.+" }
+
+assertj = { group = "org.assertj", name = "assertj-core" }
+junit5 = { group = "org.junit.jupiter", name = "junit-jupiter" }
+
+
+# plugins as libs (for build-logic)
+pluginlibs-springBoot = { group = "org.springframework.boot", name = "spring-boot-gradle-plugin", version.ref = "springBoot" }
+
+pluginlibs-kotlinJvm = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+pluginlibs-kotlinNoArg = { group = "org.jetbrains.kotlin", name = "kotlin-noarg", version.ref = "kotlin" }
+pluginlibs-kotlinPluginSpring = { group = "org.jetbrains.kotlin.plugin.spring", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+
+pluginlibs-shadow = { group = "gradle.plugin.com.github.johnrengelman", name = "shadow", version = "7.1.2" }
+
+[bundles]
+#groovy = ["groovy-core", "groovy-json", "groovy-nio"]
+
+### not used as long plugins were applied with precompiled build-logic
+#[plugins]
+#springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
+
+#vaadin = { id = "com.vaadin", version.ref = "vaadin" }
+#
+#kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+#kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+#kotlinPluginJpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+#kotlinPluginSpring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+#
+#shadow = { id = "com.github.johnrengelman.shadow", version = "7.1.2" }

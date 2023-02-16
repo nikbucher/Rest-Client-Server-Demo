@@ -1,0 +1,17 @@
+rootProject.name = "build-logic"
+
+// https://docs.gradle.org/current/userguide/structuring_software_products.html
+// https://docs.gradle.org/current/userguide/platforms.html
+dependencyResolutionManagement {
+	repositories {
+		gradlePluginPortal()
+		mavenCentral()
+		google()
+	}
+
+	versionCatalogs {
+		create("libs") {
+			from(files("../gradle/libs.versions.toml"))
+		}
+	}
+}
